@@ -11,4 +11,5 @@ class CommandTests(SimpleTestCase):
 
         call_command('wait_for_db')
 
-        patched_check.assert_called_once_with(database=['deafult'])
+        patched_check.assert_called_once_with(databases=['default'])
+ 
