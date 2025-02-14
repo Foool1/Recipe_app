@@ -2,15 +2,18 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
-from rest_framework.test import APIClient
-from rest_framework import status
+from rest_framework.test import APIClient  # type: ignore
+from rest_framework import status  # type: ignore
+
 
 CREATE_USER_URL = reverse('user:create')
 TOKEN_URL = reverse('user:token')
-ME_URL = reverse(user:me)
+ME_URL = reverse('user:me')
+
 
 def create_user(**params):
     return get_user_model().objects.create_user(**params)
+
 
 class PublicUserApiTests(TestCase):
     def setUp(self):
@@ -74,7 +77,7 @@ class PublicUserApiTests(TestCase):
     def test_create_token_bad_credentials(self):
         create_user(email='test@example.com', password='goodpass')
 
-        payload = {'email': 'test@example.com','password': 'badpass'}
+        payload = {'email': 'test@example.com', 'password': 'badpass'}
         res = self.client.post(TOKEN_URL, payload)
 
         self.assertNotIn('token', res.data)
@@ -92,6 +95,7 @@ class PublicUserApiTests(TestCase):
 
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
+
 class PrivateUserApiTests(TestCase):
 
     def setUp(self):
@@ -101,7 +105,7 @@ class PrivateUserApiTests(TestCase):
             name='Test Name',
         )
         self.client = APIClient()
-        self.client.force_authentication(user=self.user)
+        self.client.force_authenticate(user=self.user)
 
     def test_retrive_profile_success(self):
         res = self.client.get(ME_URL)
