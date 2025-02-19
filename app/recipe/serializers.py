@@ -1,4 +1,4 @@
-from rest_framework import serializers #  type: ignore
+from rest_framework import serializers  # type: ignore
 
 from core.models import (
     Tag,
@@ -7,7 +7,6 @@ from core.models import (
 
 
 class TagSerializer(serializers.ModelSerializer):
-
 
     class Meta:
         model = Tag
@@ -51,9 +50,8 @@ class RecipeSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
-class RecipeDetailSerializer(RecipeSerializer):
 
+class RecipeDetailSerializer(RecipeSerializer):
 
     class Meta(RecipeSerializer.Meta):
         fields = RecipeSerializer.Meta.fields + ['description']
-

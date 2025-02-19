@@ -1,9 +1,9 @@
-from rest_framework import (  #  type: ignore
+from rest_framework import (  # type: ignore
     viewsets,
     mixins,
 )
-from rest_framework.authentication import TokenAuthentication #  type: ignore
-from rest_framework.permissions import IsAuthenticated #  type: ignore
+from rest_framework.authentication import TokenAuthentication  # type: ignore
+from rest_framework.permissions import IsAuthenticated  # type: ignore
 
 from core.models import (
     Recipe,

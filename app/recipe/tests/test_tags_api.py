@@ -2,8 +2,8 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 from django.test import TestCase
 
-from rest_framework import status # type: ignore
-from rest_framework.test import APIClient # type: ignore
+from rest_framework import status  # type: ignore
+from rest_framework.test import APIClient  # type: ignore
 
 from core.models import Tag
 
@@ -12,15 +12,16 @@ from recipe.serializers import TagSerializer
 
 TAGS_URL = reverse('recipe:tag-list')
 
+
 def detail_url(tag_id):
     return reverse('recipe:tag-detail', args=[tag_id])
 
+
 def create_user(email='user@example.com', password='testpass123'):
-    return  get_user_model().objects.create_user(email=email, password=password)
+    return  get_user_model().objects.create_user(email=email, password=password)  # noqa
 
 
 class PubicTagsApiTests(TestCase):
-
 
     def setUp(self):
         self.client = APIClient()

@@ -3,8 +3,8 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 
-from rest_framework import status #  type: ignore
-from rest_framework.test import APIClient #  type: ignore
+from rest_framework import status  # type: ignore
+from rest_framework.test import APIClient  # type: ignore
 
 from core.models import (
     Recipe,
@@ -39,6 +39,7 @@ def create_recipe(user, **params):
 
 def create_user(**params):
     return get_user_model().objects.create_user(**params)
+
 
 class PublicRecipeAPITests(TestCase):
     def setUp(self):
