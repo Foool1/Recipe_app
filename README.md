@@ -12,9 +12,7 @@ Recipe_app to aplikacja umożliwiająca użytkownikom przeglądanie, dodawanie i
 - **Wyszukiwanie**: Szybko znajdź przepisy po tytule lub składnikach.
 - **Obsługa zdjęć**: Możliwość dodawania zdjęć powiązanych z przepisami.
 - **Filtrowanie**: Wyszukuj przepisy według różnych kryteriów, co ułatwia znalezienie interesujących Cię pozycji.
-
-## Technologie
-
+- 
 ## Wymagania
 
 - Python 3.8 lub nowszy
