@@ -35,11 +35,11 @@ Uruchomienie aplikacji w kontenerze Docker:
 docker-compose up --build
 ```
 
-Aplikacja udostępnia interaktywną dokumentację API za pomocą Swaggera. Aby zapoznać się z pełną dokumentacją, otwórz
+Aplikacja udostępnia interaktywną dokumentację API za pomocą Swaggera. Aby zapoznać się z pełną dokumentacją, otwórz w przeglądarce.
 ```bash
 http://127.0.0.1:8000/api/docs/
 ```
-w przeglądarce.
+
 
 Autoryzacja
 
