@@ -1,4 +1,4 @@
-# Recipe_app
+# Recipe App
 
 ## Opis
 
