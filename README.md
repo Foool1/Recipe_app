@@ -45,10 +45,10 @@ Autoryzacja
 
 Przed przetestowaniem zabezpieczonych endpointów wykonaj następujące kroki:
 
-    Rejestracja użytkownika – utwórz nowego użytkownika przy użyciu odpowiedniego endpointu.
+Rejestracja użytkownika – utwórz nowego użytkownika przy użyciu odpowiedniego endpointu.
 
-    Logowanie – zaloguj się, aby otrzymać token.
+Logowanie – zaloguj się, aby otrzymać token.
 
-    Autoryzacja w Swaggerze – w interfejsie Swaggera kliknij przycisk "Authorize" i wprowadź token w formacie:
+Autoryzacja w Swaggerze – w interfejsie Swaggera kliknij przycisk "Authorize" i wprowadź token w formacie:
 
-    Token "wygenerowany token"
+Token "wygenerowany token"
